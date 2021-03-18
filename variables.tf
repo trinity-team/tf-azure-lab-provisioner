@@ -34,3 +34,7 @@ variable "jumpbox_cidr_block" {
   type        = string
   description = "CIDR block allowed to connect to jumpbox"
 }
+variable "instance_password" {
+  type        = string
+  description = "password for use on instances"
+}

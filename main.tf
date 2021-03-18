@@ -14,4 +14,5 @@ module "vms" {
   prod_region    = var.prod_region
   subnets        = module.core.prod_subnets
   vm_type        = var.vm_type
+  instance_password = var.instance_password
 }

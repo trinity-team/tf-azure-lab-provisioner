@@ -54,7 +54,7 @@ resource "azurerm_virtual_machine" "windows_vms" {
   os_profile {
     computer_name  = replace(each.value.name, "nic", "vm")
     admin_username = "rkadmin"
-    admin_password = "Rubrik123$"
+    admin_password = var.instance_password
   }
   os_profile_windows_config {
   }
@@ -91,7 +91,7 @@ resource "azurerm_virtual_machine" "linux_vms" {
   os_profile {
     computer_name  = replace(each.value.name, "nic", "vm")
     admin_username = "rkadmin"
-    admin_password = "Rubrik123$"
+    admin_password = var.instance_password
   }
   os_profile_linux_config {
     disable_password_authentication = false

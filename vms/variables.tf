@@ -31,3 +31,7 @@ variable "vm_type" {
   type        = string
   description = "type of vms to launch for this lab"
 }
+variable "instance_password" {
+  type        = string
+  description = "password for use on instances"
+}

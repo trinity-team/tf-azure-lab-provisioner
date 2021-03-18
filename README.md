@@ -8,4 +8,4 @@ This module will produce the following resources for use in rubrik labs:
 * an ubuntu jumpbox with SSH and RDP whitelisted inbound from `jumpbox_cidr_blocks`
 * a windows jumpbox with SSH and RDP whitelisted inbound from `jumpbox_cidr_blocks`
 
-Resource names are prepended with `customer_name`,vms are of type `vm_type`. Only the jumpboxes are internet facing. Resource tags can be specified with `tags`.
+Resource names are prepended with `customer_name`, vms are of type `vm_type`. Only the jumpboxes are internet facing. Resource tags can be specified with `tags`.

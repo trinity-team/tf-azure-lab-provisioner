@@ -53,7 +53,7 @@ resource "azurerm_virtual_machine" "windows_vms" {
   }
   os_profile {
     #computer_name  = replace(each.value.name, "nic", "vm") <---TOO LONG
-    computer_name = "oasis-windows"
+    computer_name = "oasis-win"
     admin_username = "rkadmin"
     admin_password = var.instance_password
   }
@@ -91,7 +91,7 @@ resource "azurerm_virtual_machine" "linux_vms" {
   }
   os_profile {
     #computer_name  = "replace(each.value.name, "nic", "vm")" <---TOO LONG
-    computer_name = "oasis-linux"
+    computer_name = "oasis-lin"
     admin_username = "rkadmin"
     admin_password = var.instance_password
   }

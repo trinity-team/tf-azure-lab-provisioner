@@ -52,7 +52,8 @@ resource "azurerm_virtual_machine" "windows_vms" {
     managed_disk_type = "Standard_LRS"
   }
   os_profile {
-    computer_name  = replace(each.value.name, "nic", "vm")
+    #computer_name  = replace(each.value.name, "nic", "vm") <---TOO LONG
+    computer_name = "oasis-windows"
     admin_username = "rkadmin"
     admin_password = var.instance_password
   }
@@ -89,7 +90,8 @@ resource "azurerm_virtual_machine" "linux_vms" {
     managed_disk_type = "Standard_LRS"
   }
   os_profile {
-    computer_name  = replace(each.value.name, "nic", "vm")
+    #computer_name  = "replace(each.value.name, "nic", "vm")" <---TOO LONG
+    computer_name = "oasis-linux"
     admin_username = "rkadmin"
     admin_password = var.instance_password
   }
